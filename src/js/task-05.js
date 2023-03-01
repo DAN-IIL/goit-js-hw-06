@@ -9,4 +9,4 @@ const handleTextInput = event => {
     }
 };
 
-inputEl.addEventListener('click', handleTextInput);
+inputEl.addEventListener('input', handleTextInput);
