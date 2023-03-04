@@ -1,20 +1,16 @@
 const formEl = document.querySelector('.login-form');
-console.log(formEl);
 
-formEl.addEventListener("sumbit", handleSumbitLoginForm);
-
-function handleSumbitLoginForm(event) {
+formEl.addEventListener("submit", (event) => {
     event.preventDefault();
-    // console.log(elements); 
     
     const {
-        elements: { login, password }
-    } = event.currentTurget;
+      elements: { email, password }
+    } = event.currentTarget;
 
-if (login.value === '' || password.value === '') { 
-    alert("All fields must be filled");
-} 
+    if (email.value === '' || password.value === '') { 
+            alert("All fields must be filled");
+        } 
 
-console.log(`Login: ${login.value}, Password: ${password.value}`);
-event.currentTarget.reset();
-}
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    event.currentTarget.reset();
+  });
